@@ -15,7 +15,7 @@ public class Exercise01 {
         int i=1;
         String iStr = String.valueOf(i);
         Double iDouble = Double.valueOf(iStr);
-        String iDStr = String.valueOf(iDouble)
+        String iDStr = String.valueOf(iDouble);
         System.out.println(Boolean.valueOf("true"));
         System.out.println(String.valueOf(false));
 
@@ -23,4 +23,4 @@ public class Exercise01 {
         //1= "1" = 1.0 = "true"
         //0= "0" = 0.0 = "false"
         //2= "2" = 2.00 = "true"
-}
+}}
