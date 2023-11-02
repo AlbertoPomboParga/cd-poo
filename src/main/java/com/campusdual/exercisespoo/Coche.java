@@ -2,7 +2,8 @@ package com.campusdual.exercisespoo;
 
 import javax.sound.midi.Soundbank;
 
-public class Coche { public String marca;
+public class Coche {
+    public String marca;
     public String modelo;
     public int velocidadMaxima;
     public String combustible;
@@ -46,16 +47,16 @@ public class Coche { public String marca;
 
     public void girarVolante(int gradosDeGiro) {
         if (gradosDeGiro < 0) {
-            if (gradosDeGiro < -45){
+            if (gradosDeGiro < -45) {
                 gradosDeGiro = -45;
             }
             System.out.println("Giro a la izquierda.");
         } else if (gradosDeGiro > 0) {
-            if (gradosDeGiro > 45){
+            if (gradosDeGiro > 45) {
                 gradosDeGiro = 45;
             }
             System.out.println("Giro a la derecha.");
-        } else{
+        } else {
             System.out.println("Pongo las ruedas rectas");
         }
         this.giro = gradosDeGiro;
@@ -66,7 +67,7 @@ public class Coche { public String marca;
     }
 
     public void mostrarDetalles() {
-        System.out.println(this.marca + " " + this.modelo + ". Máx " + this.velocidadMaxima + " km/h. " + this.combustible+".");
+        System.out.println(this.marca + " " + this.modelo + ". Máx " + this.velocidadMaxima + " km/h. " + this.combustible + ".");
         System.out.println(this.velocidad + " km/h - " + this.revoluciones + " RPM - " + this.giro + "º de giro.");
     }
 
@@ -78,7 +79,7 @@ public class Coche { public String marca;
         System.out.println("== ARRANCO EL COCHE ==");
         miCoche.arrancar();
         System.out.println("== ACELERO EL COCHE ==");
-        for (int i = 0; i < 20 ; i++){
+        for (int i = 0; i < 20; i++) {
             miCoche.acelerar();
         }
         System.out.println("== APAGO EL COCHE ==");
@@ -86,7 +87,7 @@ public class Coche { public String marca;
         System.out.println("== MUESTRO LOS DETALLES DEL COCHE ==");
         miCoche.mostrarDetalles();
         System.out.println("== FRENO EL COCHE 25 VECES  ==");
-        for (int i = 0; i < 25 ; i++){
+        for (int i = 0; i < 25; i++) {
             miCoche.frenar();
         }
         System.out.println("== MUESTRO LOS DETALLES DEL COCHE ==");

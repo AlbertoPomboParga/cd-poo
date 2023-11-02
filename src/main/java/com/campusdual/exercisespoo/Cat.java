@@ -47,7 +47,7 @@ public class Cat {
     public String sex;
     public static int age;
     public String hair;
-    public static String colour;
+    public  String colour;
     public boolean castrated;
     public String eyeColour = "green";
 
