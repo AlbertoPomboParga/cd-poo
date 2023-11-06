@@ -51,12 +51,14 @@ public class Cat {
     public boolean castrated;
     public String eyeColour = "green";
 
-    public Cat(String name, String breed, String sex, String hair, boolean castrated) {
+    public Cat(String name, String breed, String sex, String hair, boolean castrated, int age,String colour) {
         this.name = name;
         this.breed = breed;
         this.sex = sex;
         this.hair = hair;
         this.castrated = castrated;
+        this.age= age;
+        this.colour=colour;
     }
 
     public static String changeColour(String color) {
@@ -90,20 +92,27 @@ public class Cat {
     }
 
     public void catDetails() {
-        System.out.println("Este gato chámase " + this.name + " ten " + age + "meses,de raza " + this.breed +
-                ".É de género " + this.sex + ". Ten os ollos " + this.eyeColour +
-                "e o pelo " + colour + "e de tipo " + this.hair + ".");
-        isCastrated();
+        System.out.println("Nombre: " + name);
+        System.out.println("Raza: " + breed);
+        System.out.println("Sexo: " + sex);
+        System.out.println("Edad: " + age + " meses");
+        System.out.println("Tamaño del pelo: " + hair);
+        System.out.println("Color del pelo: " + colour);
+        System.out.println("Color de los ojos: " + eyeColour);
+        System.out.println("Castrado: " + (castrated ? "Sí" : "No"));
 
     }
 
     public static void main(String[] args) {
-        Cat gatoStitch = new Cat("Stitch", "siamés", "macho", "pelo largo", false);
-        Cat gatoNala = new Cat("Nala", "persa", "femia", "pelo corto", false);
-        Cat gatoKira = new Cat("Kira", "esfinge", "femia", "pelo corto", false);
-    gatoStitch.changeCastrated();
-    gatoNala.changeCastrated();
-    
+        Cat gatoStitch = new Cat("Stitch", "siamés", "macho", "pelo largo", false,10,"gris");
+        Cat gatoNala = new Cat("Nala", "persa", "femia", "pelo corto", false, 8,"blanco");
+        Cat gatoKira = new Cat("Kira", "esfinge", "femia", "pelo corto", false,3,"negro");
+
+        gatoStitch.changeCastrated();
+        gatoNala.changeCastrated();
+        gatoStitch.catDetails();
+        gatoNala.catDetails();
+        gatoKira.catDetails();
     }
 
 }
