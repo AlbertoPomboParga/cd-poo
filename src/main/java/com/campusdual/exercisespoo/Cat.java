@@ -57,59 +57,60 @@ public class Cat {
         this.sex = sex;
         this.hair = hair;
         this.castrated = castrated;
-        this.age= age;
-        this.colour=colour;
+        Cat.age= age;
+        Cat.colour=colour;
     }
 
-    public static String changeColour(String color) {
-        colour = color;
-        return colour;
+    public void changeColour(String colour) {
+        Cat.colour=colour;
+
     }
 
     public void changeEyeColour(String eyeColour) {
         this.eyeColour = eyeColour;
     }
 
-    public static int changeAge(int edad) {
-        age = edad;
-        return age;
+    public static void changeAge(int age) {
+        if (age>=0) {
+            Cat.age = age;
+        }else {
+            System.out.println("La edad no puede ser negativa");
+        }
     }
 
     public int getAge() {
-        return age;
+        return Cat.age;
     }
 
-    public void changeCastrated() {
-        this.castrated = true;
+    public void changeCastrated(boolean castrated) {
+        this.castrated = castrated;
     }
 
-    public void isCastrated() {
-        if (this.castrated == true) {
-            System.out.println("Este gato está castrado");
-        } else {
-            System.out.println("Este gato non está castrado");
-        }
+    public boolean isCastrated() {
+        return this.castrated;
     }
 
     public void catDetails() {
         System.out.println("Nombre: " + name);
         System.out.println("Raza: " + breed);
         System.out.println("Sexo: " + sex);
-        System.out.println("Edad: " + age + " meses");
+        System.out.println("Edad: " + Cat.age + " meses");
         System.out.println("Tamaño del pelo: " + hair);
-        System.out.println("Color del pelo: " + colour);
+        System.out.println("Color del pelo: " + Cat.colour);
         System.out.println("Color de los ojos: " + eyeColour);
         System.out.println("Castrado: " + (castrated ? "Sí" : "No"));
 
     }
 
     public static void main(String[] args) {
-        Cat gatoStitch = new Cat("Stitch", "siamés", "macho", "pelo largo", false,10,"gris");
-        Cat gatoNala = new Cat("Nala", "persa", "femia", "pelo corto", false, 8,"blanco");
-        Cat gatoKira = new Cat("Kira", "esfinge", "femia", "pelo corto", false,3,"negro");
+        Cat gatoStitch= new Cat("Stitch","siames","macho","corto",false,10,"gris");
+        Cat gatoNala =new Cat("Nala","persa","hembra","largo",false, 6,"azul");
+        Cat gatoKira =new Cat("Kira","esfinge","hembra","largo",false, 12,"negro");
 
-        gatoStitch.changeCastrated();
-        gatoNala.changeCastrated();
+        gatoStitch.changeCastrated(true);
+        gatoNala.changeCastrated(true);
+        gatoKira.changeEyeColour("Verde oscuro");
+        gatoKira.changeAge(-5);
         gatoStitch.catDetails();
         gatoNala.catDetails();
         gatoKira.catDetails();
