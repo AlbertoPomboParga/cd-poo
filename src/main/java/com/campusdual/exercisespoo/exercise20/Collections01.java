@@ -14,11 +14,19 @@ public class Collections01 {
         List<Persona> stringList = new ArrayList<>();
 
 
-        stringList.add(new Persona("alberto","pombo"));
-        stringList.add(new Teacher("Maria","Smith","educacion"));
+        stringList.add(new Persona("John","Smith"));
+        stringList.add(new Teacher("Maria","Montessori","educacion"));
         stringList.add(new PoliceOfficer("Jack","Peralta","B99"));
-        stringList.add(new Doctor("Jack","Johns","nefrologia"));
+        stringList.add(new Doctor("Gregory","House","nefrologia"));
 
+       // for(int i=0;i<stringList.size();i++){
+         //   stringList.get(i).getDetails();
+
+
+        for (Persona p :stringList){
+            p.getDetails();
+
+        }
 
     }
 }
