@@ -19,8 +19,6 @@ public class CatEncapsulated {
         this.hair = hair;
         this.colour = colour;
         this.castrated = castrated;
-
-
     }
 
     public String getName() {
